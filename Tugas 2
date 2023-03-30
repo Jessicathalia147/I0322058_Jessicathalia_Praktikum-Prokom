@@ -1,0 +1,56 @@
+[15.40, 30/3/2023] Alfi: dictionary_figure = {"Persegi":{"Sisi":22},
+                        "Persegi Panjang":{"Panjang":10,"Lebar":5},
+                        "Segitiga Sama Sisi":{"Sisi":6,"Tinggi":3**(1/2) * 3},
+                        "Lingkaran":{"Diameter":7}}
+
+#B phi*d = 22
+# d= 7
+a = (dictionary_figure["Segitiga Sama Sisi"]["Sisi"])
+t = (dictionary_figure["Segitiga Sama Sisi"]["Tinggi"])
+p = (dictionary_figure["Persegi Panjang"]["Panjang"])
+l = (dictionary_figure["Persegi Panjang"]["Lebar"])
+d = (dictionary_figure["Lingkaran"]["Diameter"])
+s = (dictionary_figure["Persegi"]["Sisi"])
+phi= 22/7
+
+hasila = (a*t/2)*2 + (p*l)*3
+hasilb = (phi*(d**2)/4) + (phi*d*s)
+print("Luas Permukaan Prisma Segitiga adalah", "(a*t/2)*2 + (p*l)*3 =",round(hasila,2))
+print("Luas Permukaan Tabung Lingkaran adalah","(phi*(d**2)/4) + (phi*d*s) =", round(hasilb,2) )
+[15.40, 30/3/2023] Alfi: a1 = int(input("Masukkan angka pertama"))
+a2 = int(input("Masukkan angka Kedua"))
+a3 = int(input("Masukkan angka Ketiga"))
+a4 = [8, 8, 4, 6, 8, 9, 6, 5, 4, 7]
+
+a5 = [a1,a2,a3] 
+a4.extend(a5)
+a4.sort ()
+print("urutan List data yang anda miliki adalah", a4)
+
+m1 = (sum(a4))/13 #mean
+m2 = a4[6] #median
+m3 = max(a4, key=a4.count) #modus
+print ("mean yang didapat berdasarkan data milik anda adalah", m1)
+print ("median yang didapat berdasarkan data milik anda adalah", m2)
+print ("modus yang didapat berdasarkan data milik anda adalah", m3)
+
+
+nama = str(input("masukkan nama anda"))
+u = int(input("Berapa usia anda sekarang?"))
+sehat = str(input("Apakah anda lulus tes kesehatan? (LULUS/TIDAK)"))
+waras = str(input("Apakah anda lulus tes psikotes? (LULUS/TIDAK)"))
+ut = float(input("Berapa skor Ujian tertulis anda(1-100)"))
+simulasi = str(input("Apakah anda lulus tes simulasi ? (LULUS/TIDAK)"))
+surat = str(input("Apakah Anda memiliki Surat Rekomendasi dari Kursus ? (PUNYA/TIDAK)"))
+
+PUNYA = True
+LULUS = True
+TIDAK = False
+status = LULUS or TIDAK
+usia = u >= 17
+ujian_tulis = 70>= ut >= 100
+
+a = (u and sehat and waras and ut and simulasi) or surat
+
+
+print ("atas nama", nama, "usia", u, "dinyatakan", a)
